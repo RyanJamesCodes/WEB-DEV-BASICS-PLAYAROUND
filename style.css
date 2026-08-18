@@ -1,0 +1,246 @@
+/* ==================================================
+   CSS BASICS PROJECT
+   ==================================================
+
+   CSS controls how HTML looks.
+
+   General syntax:
+
+   selector {
+       property: value;
+   }
+
+   Example:
+
+   p {
+       color: blue;
+   }
+
+   ================================================== */
+
+
+/* =========================
+   1. UNIVERSAL SELECTOR
+   ========================= */
+
+/*
+   * selects every HTML element.
+
+   box-sizing makes width/height calculations easier.
+*/
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   2. ELEMENT SELECTORS
+   ========================= */
+
+/* Selects the body element */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   3. HEADER
+   ========================= */
+
+.site-header {
+    background-color: #222;
+    color: white;
+
+    /* Space inside the element */
+    padding: 24px;
+
+    /* Flexbox puts children next to each other */
+    display: flex;
+
+    /* Places items at opposite ends */
+    justify-content: space-between;
+
+    /* Aligns items vertically */
+    align-items: center;
+
+    /* Allows the layout to wrap on smaller screens */
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   4. CLASS SELECTOR
+   ========================= */
+
+/*
+   A dot means we are selecting a class.
+
+   HTML:
+   <div class="card">
+
+   CSS:
+   .card { }
+*/
+
+.card {
+    background-color: white;
+
+    /* Space inside the card */
+    padding: 24px;
+
+    /* Space outside the card */
+    margin-bottom: 20px;
+
+    /* Rounded corners */
+    border-radius: 12px;
+
+    /* Adds a subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   5. ID SELECTOR
+   ========================= */
+
+/*
+   A # selects an ID.
+
+   IDs should normally be unique.
+
+   HTML:
+   <span id="count">
+
+   CSS:
+   #count { }
+*/
+
+#count {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* =========================
+   6. LINKS
+   ========================= */
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* :hover is a pseudo-class.
+   These styles apply when the mouse is over the link. */
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   7. BUTTONS
+   ========================= */
+
+button {
+    border: none;
+    padding: 10px 16px;
+    margin: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+}
+
+/* Changes the button when the mouse is over it */
+button:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   8. FORM ELEMENTS
+   ========================= */
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    /* Makes text use the same font as the page */
+    font: inherit;
+}
+
+
+/* =========================
+   9. LISTS
+   ========================= */
+
+li {
+    margin-bottom: 6px;
+}
+
+
+/* =========================
+   10. TASK LIST
+   ========================= */
+
+#taskList {
+    padding-left: 20px;
+}
+
+/*
+   JavaScript adds this class when a task is completed.
+*/
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+/* =========================
+   11. FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* =========================
+   12. RESPONSIVE DESIGN
+   ========================= */
+
+/*
+   @media lets us change CSS depending on screen size.
+
+   This example applies when the screen is 600px wide or smaller.
+*/
+@media (max-width: 600px) {
+    .site-header {
+        /* Stack the header elements vertically */
+        flex-direction: column;
+
+        /* Centre the items */
+        text-align: center;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Tells the browser this document uses modern HTML5 -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page scale correctly on phones/tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Text shown in the browser tab -->
+    <title>HTML CSS JavaScript Basics</title>
+
+    <!-- Connects this HTML file to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header class="site-header">
+        <!-- Semantic HTML: header describes the top section of the page -->
+        <h1>My Learning Dashboard</h1>
+
+        <!-- Navigation is used for groups of navigation links -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+
+    <main>
+        <!-- SECTION groups related content together -->
+        <section id="about" class="card">
+            <h2>About This Project</h2>
+
+            <!-- A paragraph -->
+            <p>
+                This project demonstrates the basics of HTML, CSS and JavaScript.
+            </p>
+
+            <!-- Strong gives semantic importance to text -->
+            <p>
+                <strong>HTML</strong> creates structure,
+                <strong>CSS</strong> creates appearance,
+                and <strong>JavaScript</strong> adds behaviour.
+            </p>
+        </section>
+
+        <!-- =========================
+             JAVASCRIPT INTERACTION
+             ========================= -->
+
+        <section class="card">
+            <h2>JavaScript Counter</h2>
+
+            <p>
+                Current count:
+                <!-- JavaScript will change this number -->
+                <span id="count">0</span>
+            </p>
+
+            <!-- Buttons can trigger JavaScript events -->
+            <button id="decreaseButton">-</button>
+            <button id="resetButton">Reset</button>
+            <button id="increaseButton">+</button>
+        </section>
+
+        <!-- =========================
+             FORM
+             ========================= -->
+
+        <section id="tasks" class="card">
+            <h2>Task List</h2>
+
+            <!-- Form groups input and submit controls -->
+            <form id="taskForm">
+                <!-- label describes the input -->
+                <label for="taskInput">New task:</label>
+
+                <!--
+                    id identifies this element to JavaScript/CSS.
+                    name identifies the field as form data.
+                    placeholder gives the user a hint.
+                -->
+                <input
+                    id="taskInput"
+                    name="task"
+                    type="text"
+                    placeholder="e.g. Practise JavaScript"
+                >
+
+                <button type="submit">Add Task</button>
+            </form>
+
+            <!-- JavaScript will add list items here -->
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- =========================
+             CSS EXAMPLES
+             ========================= -->
+
+        <section class="card">
+            <h2>HTML Elements</h2>
+
+            <!-- Unordered list -->
+            <ul>
+                <li>Heading</li>
+                <li>Paragraph</li>
+                <li>Link</li>
+                <li>Button</li>
+                <li>Image</li>
+                <li>Form</li>
+            </ul>
+
+            <!-- Ordered list -->
+            <ol>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn JavaScript</li>
+            </ol>
+
+            <!-- A link -->
+            <a href="https://developer.mozilla.org/" target="_blank">
+                Visit MDN
+            </a>
+        </section>
+
+        <!-- =========================
+             CONTACT FORM
+             ========================= -->
+
+        <section id="contact" class="card">
+            <h2>Contact Example</h2>
+
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input id="name" type="text" required>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" rows="4"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <!-- JavaScript will display a message here -->
+            <p id="formMessage"></p>
+        </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+
+    <footer>
+        <p>&copy; 2026 My Learning Dashboard</p>
+    </footer>
+
+    <!--
+        JavaScript is loaded at the bottom so the HTML elements
+        already exist when JavaScript tries to find them.
+    -->
+    <script src="script.js"></script>
+</body>
+</html>
